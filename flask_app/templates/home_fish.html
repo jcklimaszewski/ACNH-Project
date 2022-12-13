@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style-fish.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    <title>All Fish</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="fish-header">
+            <img src="{{ data_names['bitterling']['icon_uri'] }}" class="nav-icon" alt="Fish index">
+            <h1 class="header">All Fish</h1>
+        </div>
+        <a class="nav-link text-decoration-none" href="/insects/home">Switch to Insects</a>
+        <a class="nav-link text-decoration-none" href="/logout">Logout</a>
+    </div>
+
+    <div class="d-flex align-items-md-center flex-wrap">
+        {% for fish in data_names %}
+        <div class="fish-card shadow p-3 mb-5">
+            <h2 class="fish-name text-center">{{ data_names[fish]['name']['name-USen'].title() }}</h2>
+            <!-- <span>{{ fish.title() }}</span> -->
+            <img class="fish-img" src="{{ data_names[fish]['icon_uri'] }}">
+
+            <div class="museum-phrase">
+                <span id="museum-phrase" class="text-center">"{{ data_names[fish]['museum-phrase'] }}"</span>
+            </div>
+
+            <div class="fishy-info d-flex flex-wrap">
+                <div class="detail-box d-flex flex-column align-items-md-center text-center">
+                    <h3>Sell Price</h3>
+                    <span>{{ data_names[fish]['price'] }} Bells</span>
+                </div>
+
+                <div class="detail-box d-flex flex-column align-items-md-center text-center">
+                    <h3>Shadow</h3>
+                    <span>{{ data_names[fish]['shadow'] }}</span>
+                </div>
+
+                <div class="detail-box d-flex flex-column align-items-md-center text-center">
+                    <h3>Rarity</h3>
+                    <span>{{ data_names[fish]['availability']['rarity'] }}</span>
+                </div>
+
+                <div class="detail-box d-flex flex-column align-items-md-center text-center">
+                    <h3>Location</h3>
+                    <span>{{ data_names[fish]['availability']['location'] }}</span>
+                </div>
+
+                <div class="detail-box d-flex flex-column align-items-md-center text-center">
+                    <h3>Time of Day</h3>
+                    {% if data_names[fish]['availability']['time'] == ''  %}
+                    <span>All Day</span>
+                    {% else %}
+                    <span>{{ data_names[fish]['availability']['time'] }}</span>
+                    {% endif %}
+                </div>
+
+                <div class="detail-box d-flex flex-column align-items-md-center text-center">
+                    <h3>Found Between Months</h3>
+                    {% if data_names[fish]['availability']['month-northern'] == ''  %}
+                    <span>(Northern Hem): All Year</span>
+                    {% else %}
+                    <span>(Northern Hem): {{ data_names[fish]['availability']['month-northern'] }}</span>
+                    {% endif %}
+
+                    {% if data_names[fish]['availability']['month-southern'] == ''  %}
+                    <span>(Southern Hem): All Year</span>
+                    {% else %}
+                    <span>(Southern Hem): {{ data_names[fish]['availability']['month-southern'] }}</span>
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+    <span>{{ data_names['bitterling'] }}</span>
+</body>
+</html>

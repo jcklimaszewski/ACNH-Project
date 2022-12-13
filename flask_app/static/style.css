@@ -1,0 +1,30 @@
+* {
+    margin: 0px auto;
+    padding: 0px;
+}
+
+body {
+    background-image: url("index-bg.jpg");
+}
+
+.header {
+    color: white;
+    padding: 20px;
+    background-color: rgba(127, 255, 212, 0.584);
+}
+
+.form-head, label, p {
+    color: white;
+}
+
+.form-card {
+    background-color: rgba(89, 188, 155, 0.584);
+    border-radius: 15px;
+    width: 380px;
+    height: fit-content;
+    padding: 30px;
+}
+
+.form-field {
+    margin: 10px 0px;
+}

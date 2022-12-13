@@ -1,0 +1,28 @@
+Animal Crossing: New Horizons Guide
+(ONLY MUSEUM ITEMS/FRUIT)
+
+DESCRIPTION
+For a project, I'd like to create an application to display and/or save items to a custom list to use for reference to one of my favorite video games:
+Animal Crossing: New Horizons. Within the game are a plethora of collectibles to find, with many of them only appearing depending on
+time of day, location, and weather conditions. With so many species to explore, a completionist may want a central location to find the information
+they need to complete their collection. For that reason, I will be creating a program that will allow a registered user to not only find these
+easier than on one's own, but to also allow them to create custom lists to help create a better tailored to-do list.
+
+FEATURES
+
+-Lists all in-game fish and insects
+-Includes descriptions for each, including item name, description, location, time of day found(Where applicable)
+
+-User functions (Login/Registration, which must be validated)
+-User can also add items to 'favorites' list
+-Listed objects in favorites can also be deleted (Maybe leave text area that stores notes for every entry in the list)
+
+REQUIRED TECHNOLOGIES FOR STACK
+- HTML
+- CSS
+- JavaScript/AJAX(?)
+- Python
+- Flask (and the flask_bcrypt and pymysql extensions)
+- MySQL
+
+GITHUB REPO LINK: (Link HERE)
