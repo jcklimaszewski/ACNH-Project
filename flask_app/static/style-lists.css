@@ -1,0 +1,81 @@
+* {
+    font-family: 'Oxygen', sans-serif;
+    margin: 0px auto;
+    padding: 0px;
+}
+
+label, span {
+    margin: 10px;
+    margin-right: 20px;
+}
+
+body {
+    width: auto;
+
+    background-color: black;
+}
+
+.navbar {
+    margin-bottom: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.list-card {
+    color: white;
+    margin:20px auto;
+    padding: 20px;
+    width: 400px;
+    background-color: rgb(68, 153, 222);
+    border-radius: 20px;
+}
+
+.detail-box:hover {
+    background-color: rgb(41, 105, 156);
+    transition: .3s;
+}
+
+.submit-btn {
+    position: relative;
+    left: 140px;
+    padding: 10px;
+}
+
+.detail-box {
+    margin: 10px;
+    padding: 20px;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgb(108, 165, 215);
+}
+
+.detail-box > * {
+    margin-top: 10px;
+}
+
+input, textarea {
+    background-color: rgb(196, 196, 196);
+    border: 0px;
+    border-radius: 3px;
+    color: rgb(0, 0, 0);
+}
+
+.card-section {
+    height: fit-content;
+}
+
+.flex-ctr {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    flex-wrap: wrap;
+}
+
+.form-field-radio {
+    display: flex;
+    justify-content: center;
+}
+
+.list-header {
+    text-align: center;
+}

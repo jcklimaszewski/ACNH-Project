@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex-ctr">
+        {% for list in all_lists: %}
+        <div class="list-card d-flex flex-column align-items-md-center">
+            <h2>{{ list.name }}</h2>
+            <p>{{ list.comments }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

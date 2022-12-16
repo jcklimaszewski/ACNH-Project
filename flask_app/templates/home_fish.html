@@ -16,6 +16,8 @@
             <h1 class="header">All Fish</h1>
         </div>
         <a class="nav-link text-decoration-none" href="/insects/home">Switch to Insects</a>
+        <a class="nav-link text-decoration-none" href="/lists/new_list">Create List</a>
+        <a class="nav-link text-decoration-none" href= "/lists/my_lists">My Lists</a>
         <a class="nav-link text-decoration-none" href="/logout">Logout</a>
     </div>
 
@@ -23,7 +25,7 @@
         {% for fish in data_names %}
         <div class="fish-card shadow p-3 mb-5">
             <h2 class="fish-name text-center">{{ data_names[fish]['name']['name-USen'].title() }}</h2>
-            <!-- <span>{{ fish.title() }}</span> -->
+
             <img class="fish-img" src="{{ data_names[fish]['icon_uri'] }}">
 
             <div class="museum-phrase">
@@ -79,6 +81,6 @@
         </div>
         {% endfor %}
     </div>
-    <span>{{ data_names['bitterling'] }}</span>
+    <!-- <span>{{ data_names['bitterling'] }}</span> -->
 </body>
 </html>
