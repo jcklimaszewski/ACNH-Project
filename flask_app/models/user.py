@@ -115,6 +115,10 @@ class User:
             valid = False
             flash("Last name must be greater than 2 characters") 
 
+        if len(user["password"]) < 8:
+            valid = False
+            flash("Password must be at least 8 characters") 
+
         if not EMAIL_REGEX.match(user['email']): 
             flash("Invalid email address")
             valid = False

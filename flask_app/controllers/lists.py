@@ -6,10 +6,18 @@ from flask_app.models.list import List
 
 @app.route("/lists/new_list")
 def new_list_page():
+    if "user_id" not in session:
+        flash("Please login before accessing your lists!")
+        return redirect("/")
+
     return render_template("create_list.html")
 
 @app.route("/lists/my_lists")
 def show_lists():
+    if "user_id" not in session:
+        flash("Please login before accessing your lists!")
+        return redirect("/")
+
     lists = List.get_all_by_id(session["user_id"])
     user = User.get_by_id(session["user_id"])
     return render_template("lists.html", all_lists=lists, user=user)
@@ -39,6 +47,10 @@ def edit_list(list_id):
 
 @app.route("/lists/delete/<int:list_id>")
 def delete_by_id(list_id):
+    if "user_id" not in session:
+        flash("Please login before accessing your lists!")
+        return redirect("/")
+        
     List.delete_list(list_id)
     return redirect("/lists/my_lists")
 

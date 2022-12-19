@@ -8,9 +8,12 @@ body {
 }
 
 .header {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
     color: white;
     padding: 20px;
-    background-color: rgba(127, 255, 212, 0.584);
+    background-color: rgba(73, 199, 157, 0.584);
 }
 
 
@@ -18,8 +21,14 @@ body {
     color: white;
 }
 
+input {
+    background-color: rgb(196, 196, 196);
+    border: 0px;
+    border-radius: 3px;
+}
+
 .form-card {
-    background-color: rgba(89, 188, 155, 0.584);
+    background-color: rgba(34, 135, 102, 0.584);
     border-radius: 15px;
     width: 380px;
     height: fit-content;
@@ -28,4 +37,9 @@ body {
 
 .form-field {
     margin: 10px 0px;
+}
+
+.submit-btn {
+    padding: 10px;
+    border-radius: 6px;
 }
